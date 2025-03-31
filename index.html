@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サークル紹介カード発効</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>サークル紹介カードメーカー</h1>
+    </header>
+    <div class="card">
+        <section class="card-design">
+            <h3>カードデザイン</h3>
+            <p>背景画像</p>
+            <select id="background-image">
+                <option selected value="./555555.png">蓮ノ空カード</option>
+            </select>
+    
+            <p>フォント</p>
+            <select id="font-type">
+                <option selected value="Noto Sans JP">Noto Sans JP</option>
+                <option value="Noto Serif JP">Noto Serif JP</option>
+                <option value="Potta One">Potta One</option>
+            </select>
+        </section>
+        
+        <section class="circle-info">
+            <h3>サークル情報</h3>
+            <p>サークル名</p>
+            <input type="text" id="circle-name" maxlength="8" placeholder="最大8字">
+            
+            <p>サークルID</p>
+            <input type="text" id="circle-id">
+            
+            <p>活動方針</p>
+            <select id="activity-policy">
+                <option value="" selected disabled>選択してください</option>
+                <option value="自由にプレイ">自由にプレイ</option>
+                <option value="まったりプレイ">まったりプレイ</option>
+                <option value="がっつりプレイ">がっつりプレイ</option>
+                <option value="わいわいプレイ">わいわいプレイ</option>
+                <option value="初心者OK">初心者OK</option>
+            </select>
+            
+            <p>加入方針</p>
+            <select id="join-policy">
+                <option value="" selected disabled>選択してください</option>
+                <option value="自動承認">自動承認</option>
+                <option value="承認制">承認制</option>
+                <option value="勧誘のみ">勧誘のみ</option>
+            </select>
+            
+            <p>サークル紹介</p>
+            <textarea id="circle-description" placeholder="390字以内でお書きください" maxlength="390"></textarea>
+        </section>
+    </div>
+    <div class="btn">
+        <button id="generate-card">カードを発行</button>
+        <button id="download-card" disabled>画像をダウンロード</button>
+        <button id="tweet-button" disabled>ツイートする</button>
+    </div>
+
+
+    <p class="font">
+        ※カードを発行ボタンを押してもフォントが正常に呼び込まれない場合があります。この場合は再度フォントを設定してください。
+    </p>
+    <p class="font">
+        ※ツイート（現ポスト）ボタンを押すと、文字だけが投稿されます。カード画像をダウンロードののち、ツイートボタンを押し、カードを添付してください。
+    </p>
+    <canvas id="card-canvas"></canvas>
+    <script src="./js.js"></script>
+</body>
+</html>

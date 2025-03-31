@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: 'Noto sans JP' , serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+body {
+    margin-top: 45px;
+    color: #333;
+    background: #f1f1f133;
+}
+#header * {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    background: linear-gradient(to right, #65defc, #938aff);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    box-shadow: 0 0 3px gray;
+}
+#header h1 {
+    font-size: 23px;
+    font-weight: 900;
+}
+
+
+.card {
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card h3 {
+    background: linear-gradient(to right, #65defc, #938aff);
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+input , select , textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+input:hover , select:hover , textarea:hover {
+    border: #73a1ff 2px solid;
+    transition: all 0.3s;
+}
+input:focus , select:focus , textarea:focus {
+    border: #73a1ff 2px solid;
+    background: #65defc08;
+    transition: all 0.3s;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+.font {
+    color: #ae0000;
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+canvas {
+    border: 2px solid gray;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.btn {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    box-sizing: border-box;
+}
+.btn button {
+    width: 100%;
+    background: linear-gradient(to right, #65defc, #938aff);
+    border-radius: 10px;
+    padding: 20px 0;
+    border: 2px solid #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+.btn button:disabled {
+    background: gray;
+    color: #333;
+    transition: all 0.3s;
+}
+.btn button:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+.btn button:active {
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+.bold-text {
+    font-weight: bold;
+}
