@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>リンクラサークル紹介カード</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./popup.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -40,7 +41,8 @@
             <h3>カードデザイン</h3>
             <p>背景画像</p>
             <select id="background-image">
-                <option selected value="./img/test.png">蓮ノ空カード</option>
+                <option selected value="./img/default.png">白紙</option>
+                <option value="./img/blue.png">ブルースター</option>
             </select>
     
             <p>フォント</p>
@@ -94,7 +96,12 @@
     <p class="font">
         ※ツイート（現ポスト）ボタンを押すと、文字だけが投稿されます。カード画像をダウンロードののち、ツイートボタンを押し、カードを添付してください。
     </p>
+
+
+
+
     <canvas id="card-canvas"></canvas>
     <script src="./js.js"></script>
+    <script src="./popup.js"></script>
 </body>
 </html>
