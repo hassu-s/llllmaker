@@ -142,7 +142,10 @@ canvas {
 }
 
 
-#info {
-    background: red;
-    position: absolute;
+.info {
+    padding: 20px;
+    box-sizing: border-box;
+}
+.info * {
+    margin: 0;
 }
