@@ -52,13 +52,14 @@ function updateCanvas() {
     const activityPolicy = document.getElementById("activity-policy").value;
     const joinPolicy = document.getElementById("join-policy").value;
     const description = document.getElementById("circle-description").value;
+    const textColor = document.getElementById("color").value || "black"; // Fetch the color value
     const image = new Image();
     image.src = backgroundImage;
     image.onload = function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
         ctx.font = `bold 80px '${fontType}'`;
-        ctx.fillStyle = "black";
+        ctx.fillStyle = textColor;
         ctx.textBaseline = "top";
 
         ctx.fillText("サークル名", 1400, 160);
@@ -121,4 +122,8 @@ document.getElementById("tweet-button").addEventListener("click", function () {
     );
     const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
     window.open(tweetUrl, "_blank");
+});
+
+document.getElementById("color").addEventListener("input", function () {
+    updateCanvas();
 });

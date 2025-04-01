@@ -39,11 +39,21 @@
 
     gtag('config', 'G-T5HTGCYJVS');
     </script>
+
+    <link rel="stylesheet" href="./popup.css">
 </head>
 <body>
     <header id="header">
         <h1>サークル紹介カードメーカー</h1>
     </header>
+    <div class="menulist">
+        <button class="menu" data-popup-id="information">🔔</button>
+        <div data-popup-id="allmenu" class="menu menu1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <div class="card">
         <section class="card-design">
             <h3>カードデザイン</h3>
@@ -53,12 +63,18 @@
                 <option value="./img/blue.png">ブルースター</option>
             </select>
     
-            <p>フォント</p>
-            <select id="font-type">
+            <p>フォント<span data-popup-id="fonthelp">ⓘ</span></p>
+            <select id="font-type" class="select-original redesign">
                 <option selected value="Noto Sans JP">Noto Sans JP</option>
                 <option value="Noto Serif JP">Noto Serif JP</option>
                 <option value="Potta One">Potta One</option>
             </select>
+        
+            <p>文字色</p>
+            <p class="font">
+                ※すべての文字の色が変わります。
+            </p>
+            <input type="color" id="color" value="#000000">
         </section>
         
         <section class="circle-info">
@@ -97,26 +113,99 @@
         <button id="tweet-button" disabled>ツイートする</button>
     </div>
 
-
-    <p class="font">
-        ※カードを発行ボタンを押してもフォントが正常に呼び込まれない場合があります。この場合は再度フォントを設定してください。
-    </p>
-    <p class="font">
-        ※ツイート（現ポスト）ボタンを押すと、文字だけが投稿されます。カード画像をダウンロードののち、ツイートボタンを押し、カードを添付してください。
-    </p>
-
-
-
-
-    <canvas id="card-canvas"></canvas>
-    <script src="./js.js"></script>
-
-    <div class="info">
-        <h3>お知らせ</h3>
-        <p>2025/4/1：β版リリース</p>
-        <br>
-        <p>Ver:β1.0.6</p>
+    <div class="infod">
+        <p class="font">
+            ※カードを発行ボタンを押してもフォントが正常に呼び込まれない場合があります。この場合は再度フォントを設定してください。
+        </p>
+        <p class="font">
+            ※ツイート（現ポスト）ボタンを押すと、文字だけが投稿されます。カード画像をダウンロードののち、ツイートボタンを押し、カードを添付してください。
+        </p>
     </div>
 
+
+
+
+    <div class="can">
+        <canvas id="card-canvas"></canvas>
+    </div>
+    <script src="./js.js"></script>
+
+    <div id="overlay"></div>
+
+    <div id="fonthelp" class="popup-container">
+        <h3>フォント一覧</h3>
+        <div class="popinfo">
+            <p>現在実装しているフォントは3種類です。</p><br>
+            <p style="font-family: 'Noto sans JP';">Noto Sans JP</p>
+            <p style="font-family: 'Noto serif JP';">Noto Serif JP</p>
+            <p style="font-family: 'Potta One';">Potta One</p>
+        </div>
+        <div class="btnpopa">
+            <button class="close-popup clobtn">閉じる</button>
+        </div>
+    </div>
+
+    <div id="information" class="popup-container">
+        <h3>お知らせ</h3>
+        <div class="popinfo">
+            <iframe src="./info.html" frameborder="0"></iframe>
+        </div>
+        <div class="btnpopa">
+            <button class="close-popup clobtn">閉じる</button>
+        </div>
+    </div>
+
+    <div id="license" class="popup-container">
+        <h3>ライセンス・バージョン</h3>
+        <div class="popinfo">
+            <p>
+                ライセンス<br>
+                ©PL!HS ©S ©2023 BNML ©ODD No.<br>
+                &copy;はっすーず/さくらタコヤキ<br>
+                ※各権利は各社に帰属します。<br>
+                アプリライセンスは<a href="https://sites.google.com/view/hasuu-s-link/license/linklikelovelive-circle-introduction-card-maker" target="_blank">こちら</a>から
+            </p>
+            <br>
+            <p>
+                アプリバージョン<br>
+                Ver:β1.0.7
+            </p>
+            <br>
+            <p>
+                お問い合わせ先<br>
+                <a href="https://x.com/biju_mama" target="_blank">@biju_mama/X(旧Twitter)DMまで</a>
+            </p>
+        </div>
+        <div class="btnpopa">
+            <button class="close-popup clobtn">閉じる</button>
+        </div>
+    </div>
+
+    <div id="allmenu" class="popup-container">
+        <h3>メニュー</h3>
+        <div class="popinfo btninfopop">
+            <button data-popup-id="information">お知らせ</button>
+            <button data-popup-id="license">ライセンス・バージョン</button>
+            <button onclick="window.open('https://sites.google.com/view/hasuu-s-link/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC?authuser=0', '_blank')">プライバシーポリシー（外部サイトが開きます）</button>
+            <button disabled>利用規約</button>
+        </div>
+        <div class="btnpopa">
+            <button class="close-popup clobtn">閉じる</button>
+        </div>
+    </div>
+
+    <div id="offline-popup" class="popup-container">
+        <h3>通信エラー</h3>
+        <div class="popinfo">
+            <h4 style="text-align: center; font-size: 20px; font-weight: 900;">通信中にエラーが発生しました</h4>
+            <p>ネットワークが回復次第このポップアップを閉じることができます。</p>
+        </div>
+        <div class="btnpopa">
+            <button id="offline-close" class="close-popup clobtn" disabled>閉じる</button>
+        </div>
+    </div>
+
+    <script src="./popup.js"></script>
+    <script src="./select.js"></script>
 </body>
 </html>
