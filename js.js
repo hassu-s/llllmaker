@@ -58,30 +58,32 @@ function updateCanvas() {
     image.onload = function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-        ctx.font = `bold 80px '${fontType}'`;
+
+        ctx.font = `bold 200px '${fontType}'`;
         ctx.fillStyle = textColor;
         ctx.textBaseline = "top";
+        ctx.fillText("サクメン", 240, 120);
 
+        ctx.font = `bold 150px '${fontType}'`;
+        ctx.fillText("募集中！", 350, 360);
+
+        ctx.font = `bold 80px '${fontType}'`;
         ctx.fillText("サークル名", 1400, 160);
         ctx.font = `80px '${fontType}'`;
         ctx.fillText(name, 1400, 270);
         ctx.font = `bold 80px '${fontType}'`;
-        
         ctx.fillText("サークルID", 2200, 160);
         ctx.font = `80px '${fontType}'`;
         ctx.fillText(id, 2200, 270);
         ctx.font = `bold 80px '${fontType}'`;
-
         ctx.fillText("活動方針", 1400, 420);
         ctx.font = `80px '${fontType}'`;
         ctx.fillText(activityPolicy, 1400, 530);
         ctx.font = `bold 80px '${fontType}'`;
-
         ctx.fillText("加入方針", 2200, 420);
         ctx.font = `80px '${fontType}'`;
         ctx.fillText(joinPolicy, 2200, 530);
         ctx.font = `bold 80px '${fontType}'`;
-
         ctx.fillText("サークル紹介", 140, 680);
         ctx.font = `80px '${fontType}'`;
         const maxWidth = canvas.width - 280;
