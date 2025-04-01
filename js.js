@@ -61,11 +61,12 @@ function updateCanvas() {
 
         ctx.font = `bold 200px '${fontType}'`;
         ctx.fillStyle = textColor;
+
         ctx.textBaseline = "top";
-        ctx.fillText("サクメン", 240, 120);
+        ctx.fillText("サクメン", 240, 170);
 
         ctx.font = `bold 150px '${fontType}'`;
-        ctx.fillText("募集中！", 350, 360);
+        ctx.fillText("募集中！", 350, 410);
 
         ctx.font = `bold 80px '${fontType}'`;
         ctx.fillText("サークル名", 1400, 160);

@@ -58,10 +58,7 @@
   padding: auto;
   margin: auto;
 }
-.clobtn {
-  position: absolute;
-  bottom: 13px;
-}
+
 .popup-container.open {
   display: block;
   animation: popupOpen 0.3s forwards;
@@ -70,6 +67,9 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+  position: absolute;
+  bottom: 13px;
+  width: 100%;
 }
 .btnpopa button {
   background: linear-gradient(to right, #65defc, #938aff);

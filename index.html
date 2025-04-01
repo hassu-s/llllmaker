@@ -41,6 +41,11 @@
     </script>
 
     <link rel="stylesheet" href="./popup.css">
+    <style>
+        span {
+            padding-left: 5px;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -57,10 +62,16 @@
     <div class="card">
         <section class="card-design">
             <h3>カードデザイン</h3>
-            <p>背景画像</p>
+            <p>背景画像<span data-popup-id="cardinfo">ⓘ</span></p>
             <select id="background-image">
                 <option selected value="./img/default.png">白紙</option>
-                <option value="./img/blue.png">ブルースター</option>
+                <option value="./img/hassus.png">はっすーずデザイン</option>
+                <option value="./img/blue_a.png">ブルーディープ</option>
+                <option value="./img/blue_b.png">ブルーライト</option>
+                <option value="./img/sea.png">シートライアングル</option>
+                <option value="./img/note_l.png">左閉じノート</option>
+                <option value="./img/note_r.png">右閉じノート</option>
+                <option value="./img/card.png">カード</option>
             </select>
     
             <p>フォント<span data-popup-id="fonthelp">ⓘ</span></p>
@@ -68,6 +79,7 @@
                 <option selected value="Noto Sans JP">Noto Sans JP</option>
                 <option value="Noto Serif JP">Noto Serif JP</option>
                 <option value="Potta One">Potta One</option>
+                <option value="Kiwi Maru">キウイ丸</option>
             </select>
         
             <p>文字色</p>
@@ -83,7 +95,7 @@
             <input type="text" id="circle-name" maxlength="8" placeholder="最大8字">
             
             <p>サークルID</p>
-            <input type="text" id="circle-id">
+            <input type="text" id="circle-id" maxlength="9" placeholder="9文字のサークルID">
             
             <p>活動方針</p>
             <select id="activity-policy">
@@ -104,6 +116,9 @@
             </select>
             
             <p>サークル紹介</p>
+            <p class="font">
+                ※改行はできません。改行に見せる場合はスペースにて打ち込んでください。（ただし、スペースも文字数カウントされます）
+            </p>
             <textarea id="circle-description" placeholder="390字以内でお書きください" maxlength="390"></textarea>
         </section>
     </div>
@@ -133,12 +148,16 @@
     <div id="overlay"></div>
 
     <div id="fonthelp" class="popup-container">
-        <h3>フォント一覧</h3>
+        <h3>フォントリスト</h3>
         <div class="popinfo">
-            <p>現在実装しているフォントは3種類です。</p><br>
-            <p style="font-family: 'Noto sans JP';">Noto Sans JP</p>
-            <p style="font-family: 'Noto serif JP';">Noto Serif JP</p>
-            <p style="font-family: 'Potta One';">Potta One</p>
+            <p style="padding-top: 7px; padding-bottom: 3px;">現在実装しているフォントは4種類です。</p>
+            <p class="font">※フォントはGoogleフォントからデータを取得しているため、初回読み込み時や低速ネットワーク（通信制限）では、フォントの読み込みに遅延が生じたり、正常に表示されないことがあります。その場合は複数回「カードを発行」を押してください。</p>
+            <div class="fontp">
+                <p style="font-family: 'Noto sans JP';">Noto Sans JP</p>
+                <p style="font-family: 'Noto serif JP';">Noto Serif JP</p>
+                <p style="font-family: 'Potta One';">Potta One</p>
+                <p style="font-family: 'Kiwi Maru';">キウイ丸</p>
+            </div>
         </div>
         <div class="btnpopa">
             <button class="close-popup clobtn">閉じる</button>
@@ -149,6 +168,16 @@
         <h3>お知らせ</h3>
         <div class="popinfo">
             <iframe src="./info.html" frameborder="0"></iframe>
+        </div>
+        <div class="btnpopa">
+            <button class="close-popup clobtn">閉じる</button>
+        </div>
+    </div>
+
+    <div id="cardinfo" class="popup-container">
+        <h3>カードリスト</h3>
+        <div class="popinfo">
+            <iframe src="./card.html" frameborder="0"></iframe>
         </div>
         <div class="btnpopa">
             <button class="close-popup clobtn">閉じる</button>
@@ -168,7 +197,7 @@
             <br>
             <p>
                 アプリバージョン<br>
-                Ver:β1.0.8
+                Ver:β1.0.9
             </p>
             <br>
             <p>
@@ -186,6 +215,8 @@
         <div class="popinfo btninfopop">
             <button data-popup-id="information">お知らせ</button>
             <button data-popup-id="license">ライセンス・バージョン</button>
+            <button data-popup-id="cardinfo">カードリスト</button>
+            <button data-popup-id="fonthelp">フォントリスト</button>
             <button onclick="window.open('https://sites.google.com/view/hasuu-s-link/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC?authuser=0', '_blank')">プライバシーポリシー（外部サイトが開きます）</button>
             <button disabled>利用規約</button>
         </div>

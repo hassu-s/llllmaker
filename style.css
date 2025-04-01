@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Potta+One&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +13,7 @@
 
 body {
     margin-top: 85px;
+    margin-bottom: 20px;
     color: #333;
     background: #f1f1f133;
 }
@@ -110,6 +111,7 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    height: auto;
     box-sizing: border-box;
     border-radius: 10px;
 }
@@ -234,4 +236,12 @@ canvas {
     transform: none;
     transition: all 0.3s;
     opacity: 1;
+}
+
+.fontp p {
+    background: #fff;
+    padding: 10px;
+    margin: 4px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(205, 205, 205);
 }
