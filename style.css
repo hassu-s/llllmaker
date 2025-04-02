@@ -192,6 +192,7 @@ canvas {
     border-radius: 100px;
     box-sizing: border-box;
     transition: all 0.3s;
+    color: #fff;
 }
 .menu:hover {
     transform: scale(1.05);
@@ -244,4 +245,29 @@ canvas {
     margin: 4px 0;
     border-radius: 5px;
     border: 1px solid rgb(205, 205, 205);
+}
+.shares button {
+    border: 2px solid #333;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    transition: all 0.3s;
+}
+.shares button:hover {
+    transform: scale(1.02);
+    transition: all 0.3s;
+}
+.shares button:active {
+    transform: scale(0.98);
+    transition: all 0.3s;
+    opacity: 0.5;
+}
+.share1 {
+    background: #fff;
+}
+.xp {
+    background: #333;
+    color: #fff;
 }
