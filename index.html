@@ -52,8 +52,9 @@
         <h1>サークル紹介カードメーカー</h1>
     </header>
     <div class="menulist">
-        <button class="menu" data-popup-id="information">🔔</button>
-        <button class="menu" data-popup-id="sharemode">共有</button>
+        <button class="menu" id="remode" data-popup-id="mode1"><img src="./image/icon/change.png" alt="" style="padding-right: 10px;">開発中コンテンツ</button>
+        <button class="menu" data-popup-id="information"><img src="./image/icon/info_w.png" alt=""></button>
+        <button class="menu" data-popup-id="sharemode"><img src="./image/icon/share_w.png" alt=""></button>
         <div data-popup-id="allmenu" class="menu menu1">
             <div></div>
             <div></div>
@@ -73,6 +74,8 @@
                 <option value="./img/note_l.png">左綴じノート</option>
                 <option value="./img/note_r.png">右綴じノート</option>
                 <option value="./img/card.png">カード</option>
+                <option value="./img/international.png">国際郵便</option>
+                <option value="./img/llll.png">リンクラ風</option>
             </select>
     
             <p>フォント<span data-popup-id="fonthelp">ⓘ</span></p>
@@ -81,6 +84,8 @@
                 <option value="Noto Serif JP">Noto Serif JP</option>
                 <option value="Potta One">Potta One</option>
                 <option value="Kiwi Maru">キウイ丸</option>
+                <option value="Dela Gothic One">Dela Gothic One</option>
+                <option value="Hachi Maru Pop">はちまるポップ</option>
             </select>
         
             <p>文字色</p>
@@ -138,12 +143,21 @@
         </p>
     </div>
 
-
-
-
     <div class="can">
         <canvas id="card-canvas"></canvas>
     </div>
+
+    <footer>
+        <div class="copy">
+            <p>©PL!HS ©S ©2023 BNML ©ODD No./©HS'S</p>
+            <p>Icon by <a href="https://icons8.jp" target="_blank">Icons8</a></p>
+        </div>
+        <div class="infos">
+            <span data-popup-id="contact">お問い合わせ</span>
+        </div>
+    </footer>
+
+    <!-- ここからポップアップ -->
     <script src="./js.js"></script>
 
     <div id="overlay"></div>
@@ -158,6 +172,8 @@
                 <p style="font-family: 'Noto serif JP';">Noto Serif JP</p>
                 <p style="font-family: 'Potta One';">Potta One</p>
                 <p style="font-family: 'Kiwi Maru';">キウイ丸</p>
+                <p style="font-family: 'Dela Gothic One';">Dela Gothic One</p>
+                <p style="font-family: 'Hachi Maru Pop'">はちまるポップ</p>
             </div>
         </div>
         <div class="btnpopa">
@@ -193,11 +209,24 @@
         </div>
     </div>
 
+    <div id="mode1" class="popup-container">
+        <h3>詳細モードについて</h3>
+        <div class="popinfo">
+            <p>
+                今後、サークル紹介カードメーカーにより詳細を書き込むことができるモードを実装予定です。<br>
+                詳細は追ってお知らせいたします。
+            </p>
+        </div>
+        <div class="btnpopa">
+            <button class="close-popup clobtn">閉じる</button>
+        </div>
+    </div>
+
     <div id="sharemode" class="popup-container">
         <h3>サイトを共有</h3>
-        <div class="popinfo shares">
-            <button id="share" class="share1">共有</button>
-            <button id="xpost" class="xp">Xでシェア</button>
+        <div class="popinfo shares popb1">
+            <button id="share" class="share1"><img src="./image/icon/share_b.png" alt=""><p>共有</p></button>
+            <button id="xpost" class="xp"><img src="./image/icon/x.png" alt=""><p>Xでシェア</p></button>
         </div>
         <div class="btnpopa">
             <button class="close-popup clobtn">閉じる</button>
@@ -217,7 +246,7 @@
             <br>
             <p>
                 アプリバージョン<br>
-                Ver:β1.0.11
+                Ver:β1.0.13
             </p>
             <br>
             <p>
@@ -232,15 +261,16 @@
 
     <div id="allmenu" class="popup-container">
         <h3>メニュー</h3>
-        <div class="popinfo btninfopop">
-            <button data-popup-id="information">お知らせ</button>
-            <button data-popup-id="contact">お問い合わせ</button>
-            <button data-popup-id="license">ライセンス・バージョン</button>
-            <button data-popup-id="cardinfo">カードリスト</button>
-            <button data-popup-id="fonthelp">フォントリスト</button>
-            <button data-popup-id="sharemode">共有</button>
-            <button onclick="window.open('https://sites.google.com/view/hasuu-s-link/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC?authuser=0', '_blank')">プライバシーポリシー（外部サイトが開きます）</button>
-            <button disabled>利用規約</button>
+        <div class="popinfo btninfopop popb1">
+            <button data-popup-id="information"><img src="./image/icon/info_b.png" alt=""><p>お知らせ</p></button>
+            <button data-popup-id="contact"><img src="./image/icon/contact_b.png" alt=""><p>お問い合わせ</p></button>
+            <button data-popup-id="license"><img src="./image/icon/license.png" alt=""><p>ライセンス・バージョン</p></button>
+            <button data-popup-id="cardinfo"><img src="./image/icon/card.png" alt=""><p>カードリスト</p></button>
+            <button data-popup-id="fonthelp"><img src="./image/icon/font.png" alt=""><p>フォントリスト</p></button>
+            <button data-popup-id="sharemode"><img src="./image/icon/share_b.png" alt=""><p>共有</p></button>
+            <button onclick="window.open('https://sites.google.com/view/hasuu-s-link/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC?authuser=0', '_blank')"><img src="./image/icon/document.png" alt=""></img><p>プライバシーポリシー（外部サイトが開きます）</p></button>
+            <button disabled><img src="./image/icon/maintenance.png" alt=""><p>【鋭意開発中】新モード</p></button>
+            <button disabled><img src="./image/icon/document.png" alt=""><p>利用規約</p></button>
         </div>
         <div class="btnpopa">
             <button class="close-popup clobtn">閉じる</button>

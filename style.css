@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hachi+Maru+Pop&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Potta+One&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -130,7 +130,7 @@ canvas {
     width: 100%;
     background: linear-gradient(to right, #65defc, #938aff);
     border-radius: 10px;
-    padding: 20px 0;
+    padding: 20px 10px;
     border: 2px solid #333;
     color: #fff;
     transition: all 0.3s;
@@ -174,25 +174,32 @@ canvas {
     position: fixed;
     top: 65px;
     padding: 5px;
+    padding-right: 10px;
     display: flex;
     gap: 5px;
     left: 0;
     right: 0;
     box-sizing: border-box;
     backdrop-filter: blur(1px);
-    background: #ffffff80;
+    background: #ffffffa6;
     justify-content: end;
     z-index: 1000;
 }
 .menu {
     background: #333;
-    width: 60px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     border: #000 1px solid;
-    border-radius: 100px;
+    border-radius: 10px;
     box-sizing: border-box;
     transition: all 0.3s;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu img {
+    height: 60%;
 }
 .menu:hover {
     transform: scale(1.05);
@@ -270,4 +277,46 @@ canvas {
 .xp {
     background: #333;
     color: #fff;
+}
+#remode {
+    position: absolute;
+    left: 10px;
+    width: 150px;
+}
+
+a {
+    color: #73a1ff;
+}
+
+footer {
+    background: #333;
+    padding: 20px;
+    position: relative;
+    top: 30px;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+}
+.infos , .copy {
+    width: 100%;
+}
+.infos {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.infos span {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.popb1 p {
+    padding-left: 30px;
+}
+
+.popb1 img {
+    height: 20px;
+    position: absolute;
 }
