@@ -94,6 +94,7 @@
   background: gray;
   transform: none;
   transition: all 0.3s;
+  cursor: not-allowed;
 }
 .popup-container.closing {
   animation: popupClose 0.3s forwards;
