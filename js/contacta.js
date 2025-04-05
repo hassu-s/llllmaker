@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const os = (function () {
         if (navigator.userAgent.indexOf("Windows") !== -1) return "Windows";
-        if (navigator.userAgent.indexOf("Mac") !== -1) return "MacOS";
-        if (navigator.userAgent.indexOf("Linux") !== -1) return "Linux";
         if (/Android/.test(navigator.userAgent)) return "Android";
         if (/iPhone|iPad|iPod/.test(navigator.userAgent)) return "iOS";
+        if (navigator.userAgent.indexOf("Mac") !== -1) return "MacOS";
+        if (navigator.userAgent.indexOf("Linux") !== -1) return "Linux";
         return "Unknown OS";
     })();
 
