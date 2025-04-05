@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>リンクラサークル紹介カードメーカー</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>学マスサークル紹介カードメーカー</title>
+    <link rel="stylesheet" href="./css/gakumasustyle.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -11,24 +11,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="access-allowed" content="true">
     <!-- 検索エンジン用 -->
-    <meta name="description" content="リンクラサークル紹介カードメーカー">
-    <meta name="keywords" content="Link！Like！ラブライブ！, リンクラ, リンクラサークル">
-    <meta name="author" content="リンクラサークル紹介カードメーカー">
+    <meta name="description" content="学マスサークル紹介カードメーカー">
+    <meta name="keywords" content="学園アイドルマスター, 学マス, 学マスサークル">
+    <meta name="author" content="学マスサークル紹介カードメーカー">
     <!-- SNS用 -->
-    <meta property="og:title" content="リンクラサークル紹介カードメーカー" />
-    <meta property="og:description" content="リンクラサークルの紹介カードを簡単に作成！" />
-    <meta property="og:image" content="https://hassu-s.github.io/llllmaker/image/xmeta.png" />
-    <meta property="og:url" content="https://hassu-s.github.io/llllmaker/" />
+    <meta property="og:title" content="学マスサークル紹介カードメーカー" />
+    <meta property="og:description" content="学マスサークルの紹介カードを簡単に作成！" />
+    <meta property="og:image" content="https://hassu-s.github.io/llllmaker/image/xmeta_g.png" />
+    <meta property="og:url" content="https://hassu-s.github.io/llllmaker/gakumasu" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="リンクラサークル紹介カードメーカー" />
-    <meta name="twitter:description" content="リンクラサークルの紹介カードを簡単に作成！" />
+    <meta name="twitter:title" content="学マスサークル紹介カードメーカー" />
+    <meta name="twitter:description" content="学マスサークルの紹介カードを簡単に作成！" />
     <meta name="twitter:image" content="https://hassu-s.github.io/llllmaker/image/xmeta.png" />
     <meta name="twitter:site" content="@biju_mama" />
-    <meta name="twitter:domain" content="https://hassu-s.github.io/llllmaker/" />
+    <meta name="twitter:domain" content="https://hassu-s.github.io/llllmaker/gakumasu" />
 
-    <link href="./image/logo.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./image/logo_g.png" rel="shortcut icon" type="image/x-icon">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5HTGCYJVS"></script>
@@ -40,7 +40,7 @@
     gtag('config', 'G-T5HTGCYJVS');
     </script>
 
-    <link rel="stylesheet" href="./popup.css">
+    <link rel="stylesheet" href="./css/gakumasupopup.css">
     <style>
         span {
             padding-left: 5px;
@@ -52,7 +52,6 @@
         <h1>サークル紹介カードメーカー</h1>
     </header>
     <div class="menulist">
-        <button class="menu" id="remode" data-popup-id="mode1"><img src="./image/icon/change.png" alt="" style="padding-right: 10px;">開発中コンテンツ</button>
         <button class="menu" data-popup-id="information"><img src="./image/icon/info_w.png" alt=""></button>
         <button class="menu" data-popup-id="sharemode"><img src="./image/icon/share_w.png" alt=""></button>
         <div data-popup-id="allmenu" class="menu menu1">
@@ -75,7 +74,6 @@
                 <option value="./img/note_r.png">右綴じノート</option>
                 <option value="./img/card.png">カード</option>
                 <option value="./img/international.png">国際郵便</option>
-                <option value="./img/llll.png">リンクラ風</option>
             </select>
     
             <p>フォント<span data-popup-id="fonthelp">ⓘ</span></p>
@@ -98,7 +96,7 @@
         <section class="circle-info">
             <h3>サークル情報</h3>
             <p>サークル名</p>
-            <input type="text" id="circle-name" maxlength="8" placeholder="最大8字">
+            <input type="text" id="circle-name" maxlength="12" placeholder="最大12字">
             
             <p>サークルID</p>
             <input type="text" id="circle-id" maxlength="9" placeholder="9文字のサークルID">
@@ -109,8 +107,9 @@
                 <option value="自由にプレイ">自由にプレイ</option>
                 <option value="まったりプレイ">まったりプレイ</option>
                 <option value="がっつりプレイ">がっつりプレイ</option>
-                <option value="わいわいプレイ">わいわいプレイ</option>
-                <option value="初心者OK">初心者OK</option>
+                <option value="毎日ログイン">毎日ログイン</option>
+                <option value="初心者歓迎">初心者歓迎</option>
+                <option value="コンテスト上位狙い">コンテスト上位狙い</option>
             </select>
             
             <p>加入方針</p>
@@ -118,7 +117,6 @@
                 <option value="" selected disabled>選択してください</option>
                 <option value="自動承認">自動承認</option>
                 <option value="承認制">承認制</option>
-                <option value="勧誘のみ">勧誘のみ</option>
             </select>
             
             <p>サークル紹介</p>
@@ -149,7 +147,7 @@
 
     <footer>
         <div class="copy">
-            <p>©PL!HS ©S ©2023 BNML ©ODD No./©HS'S</p>
+            <p>©Bandai Namco Entertainment Inc./©HS'S</p>
             <p>Icon by <a href="https://icons8.jp" target="_blank">Icons8</a><img src="./image/outw.png" class="out" alt=""></p>
         </div>
         <div class="infos">
@@ -158,7 +156,7 @@
     </footer>
 
     <!-- ここからポップアップ -->
-    <script src="./js.js"></script>
+    <script src="./js/gakumasujs.js"></script>
 
     <div id="overlay"></div>
 
@@ -190,7 +188,6 @@
             <button class="close-popup clobtn">閉じる</button>
         </div>
     </div>
-
     <div id="contact" class="popup-container">
         <h3>お問い合わせ</h3>
         <div class="popinfo">
@@ -239,7 +236,7 @@
         <div class="popinfo">
             <p>
                 ライセンス<br>
-                ©PL!HS ©S ©2023 BNML ©ODD No.<br>
+                ©Bandai Namco Entertainment Inc.<br>
                 &copy;はっすーず/さくらタコヤキ<br>
                 ※各権利は各社に帰属します。<br>
                 アプリライセンスは<a href="https://sites.google.com/view/hasuu-s-link/license/linklikelovelive-circle-introduction-card-maker" target="_blank">こちら</a><img src="./image/out.png" class="out" alt=""><span class="out1">から</span>
@@ -258,7 +255,7 @@
     <div id="allmenu" class="popup-container">
         <h3>メニュー</h3>
         <div class="popinfo btninfopop popb1">
-            <button onclick="location.href='gakumasu'" id="modec"><img src="./image/gakumasu.webp"><p>学マスモードへ</p></button>
+            <button onclick="location.href='/'" id="modec"><img src="./image/llll.png"><p>リンクラモードへ</p></button>
             <button data-popup-id="information"><img src="./image/icon/info_b.png" alt=""><p>お知らせ</p></button>
             <button data-popup-id="contact"><img src="./image/icon/contact_b.png" alt=""><p>お問い合わせ</p></button>
             <button data-popup-id="license"><img src="./image/icon/license.png" alt=""><p>ライセンス</p></button>
@@ -290,7 +287,7 @@
     <script>
         document.getElementById("share").addEventListener("click", async () => {
         const shareData = {
-            url: "https://hassu-s.github.io/llllmaker/"
+            url: "https://hassu-s.github.io/llllmaker/gakumasu"
         };
 
         try {
@@ -304,7 +301,7 @@
     </script>
     <script>
         document.getElementById("xpost").addEventListener("click", function() {
-            const tweetText = encodeURIComponent("簡単にリンクラサークルの紹介カードを作ろう！\n🪷「リンクラサークル紹介カードメーカー」 \n> https://hassu-s.github.io/llllmaker/\n#リンクラ #リンクラサークル紹介カードメーカー");
+            const tweetText = encodeURIComponent("簡単に学マスサークルの紹介カードを作ろう！\n「学マスサークル紹介カードメーカー」 \n> https://hassu-s.github.io/llllmaker/gakumasu\n#学マス #学マスサークル紹介カードメーカー");
             const twitterUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
             window.open(twitterUrl, "_blank");
         });
